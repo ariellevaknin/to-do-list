@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Daily To-do List</h1>
+        <div id="new-task">
+            <button class="btn" id="new-btn">+ New Task</button>
+
+            <div id="new-input">
+                <div class="inputs">
+                  
+                  <p>New Task: </p>
+                  <input type="text" id="task-input">
+
+                  <br>
+
+                  <p>Time of Day: </p>
+                  <input type="text" id="time-input"> 
+
+                  <button class="btn" id="add-btn" onclick="add()">Add Task</button> 
+
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="task-list-nav">
+            <p>Task</p>
+            <p>Time</p>
+        </div>
+
+        <div class="task-list" id="task-list">
+            <div id="complete-message">Woohoo! No tasks to complete!</div>
+            <div id="list-task"></div>
+            <div id="list-button"></div>
+            <div id="list-time"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
