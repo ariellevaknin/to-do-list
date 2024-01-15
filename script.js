@@ -40,7 +40,7 @@ function showTasks() {
     timeList.innerHTML = '';
     buttonList.innerHTML = '';
 
-    if (tasks.length === 1) {
+    if (tasks.length === 0) {
         message.style.display = 'block';
 
     } else {
