@@ -19,19 +19,22 @@ addTask.addEventListener("click", () => {
 });
 
 function add(taskInput, timeInput) {
-    let obj = {
-        task: taskInput,
-        time: timeInput,
-    };
-
+    
     if ((taskInput === '' || timeInput === '') || (taskInput === '' && timeInput === '')) {
-        alert('Please fill in all fields.')
-    }
+        alert('Please fill in all fields.');
+        addNew.style.display = 'block';
+        newButton.style.display = 'none';
+    } else {
+        let obj = {
+            task: taskInput,
+            time: timeInput,
+        };
 
     tasks.push(obj);
     
     saveData();
     showTasks();
+}
 }
 
 function showTasks() {
