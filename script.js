@@ -24,6 +24,10 @@ function add(taskInput, timeInput) {
         time: timeInput,
     };
 
+    if ((taskInput === '' || timeInput === '') || (taskInput === '' && timeInput === '')) {
+        alert('Please fill in all fields.')
+    }
+
     tasks.push(obj);
     
     saveData();
