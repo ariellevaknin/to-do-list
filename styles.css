@@ -85,7 +85,6 @@ body {
 
 .complete-button, .time-element, .task-element {
     margin-top: 2px;
-    padding: 1px;
 }
 
 #complete-message {

@@ -72,17 +72,23 @@ function showTasks() {
         buttonList.appendChild(completeButton);
         taskList.appendChild(taskElement);
         
+      } else {
+        tasks.splice(index, 1);
+        saveData();
+        showTasks();
       }
     });  
     }
   }
 
   function saveData() {
-    localStorage.setItem("data", tasks);
+    localStorage.setItem("data", JSON.stringify(tasks));
   }
 
   function showData() {
-    tasks = localStorage.getItem("data");
+    const storedData = localStorage.getItem("data");
+    tasks = storedData ? JSON.parse(storedData) : [];
   }
 
   showData();
+  showTasks();
